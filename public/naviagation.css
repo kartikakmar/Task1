@@ -1,0 +1,117 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('background2.jpg') no-repeat center center fixed;
+    background-size: cover;
+}
+
+/* Navigation Bar */
+.navbar {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Navigation Links */
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-links li {
+    display: inline;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-size: 18px;
+    padding: 10px 15px;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.nav-links a:hover {
+    background-color: #f4a261;
+    color: #000;
+}
+
+/* Logo */
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Buttons */
+.nav-buttons .btn {
+    padding: 10px 20px;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Add Button */
+.add-btn {
+    background: linear-gradient(135deg, #007bff, #0056b3) !important;
+    color: white;
+}
+
+.add-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 5px 15px rgba(0, 123, 255, 0.3);
+}
+
+/* Verify Button */
+.verify-btn {
+    background: linear-gradient(135deg, #28a745, #1c7430) !important;
+    color: white;
+}
+
+.verify-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 5px 15px rgba(40, 167, 69, 0.3);
+}
+
+/* Mobile Menu */
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        background: rgba(232, 232, 235, 0.9);
+        width: 100%;
+        left: 0;
+        top: 60px;
+        padding: 10px;
+        border-radius: 0 0 8px 8px;
+        text-align: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+}
